@@ -6,7 +6,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class DataService {
 
-  private url = 'http://localhost:3100';
+  private url = 'http://localhost:3001';
 
   constructor(private http: HttpClient) {
   }
@@ -16,7 +16,8 @@ export class DataService {
   }
 
   getById(id: string) {
-    return this.http.get(this.url + '/api/post/' + id);
+    console.log('data-service -> id:', id)
+    return this.http.get(this.url + '/api/posts/' + id);
   }
 
 
