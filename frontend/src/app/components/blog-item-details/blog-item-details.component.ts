@@ -24,7 +24,6 @@ export class BlogItemDetailsComponent implements OnInit {
       .subscribe((params: any) => {
         id = params.get('id');
       });
-
     this.service.getById(id).subscribe((res: any) => {
       const post = res[0];
       this.image = post['image'];
