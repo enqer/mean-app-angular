@@ -14,4 +14,3 @@ export class BlogItemComponent {
   @Input() text?: string;
   @Input() id?: string;
 }
-
