@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="mb-4">
+        <h3>Add new post</h3>
+    </div>
+    <form action="post" autocomplete="off" method="POST">
+      <div class="input-group m-2">
+        <input  (change)="onFileSelected($event)" accept="image/png, image/jpeg" type="file" class="form-control"
+               name="image" placeholder="Image" title="image"></div>
+  
+      <div class="input-group m-2">
+        <input [(ngModel)]="post.title" type="text" class="form-control"
+               name="title" placeholder="Title" title="title">
+      </div>
+
+      <div class="input-group m-2">
+        <textarea [(ngModel)]="post.description" class="form-control"
+               name="desc" placeholder="Description" title="description"></textarea>
+
+      </div>
+      <img 
+      src="data:image/png;base64, " 
+      alt="">
+      <button (click)="createPost()"  class="btn btn-primary m-4" type="submit" title="Przycisk">
+        Save
+      </button>
+    </form>
+  </div>
