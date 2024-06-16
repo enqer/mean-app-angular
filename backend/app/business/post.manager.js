@@ -22,10 +22,18 @@ function create(context) {
         }
     }
 
+    async function createPost(data) {
+        let result = await postDAO.createPost(data);
+        if (result) {
+            return result;
+        }
+    }
+
     return {
         query: query,
         get: get,
         createNewOrUpdate: createNewOrUpdate,
+        createPost: createPost
     };
 }
 

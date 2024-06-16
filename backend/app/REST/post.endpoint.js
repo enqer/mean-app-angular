@@ -12,7 +12,7 @@ const postEndpoint = (router) => {
 
     router.post('/api/posts', async (request, response, next) => {
         try {
-            let result = await business.getPostManager().createNewOrUpdate(request.body);
+            let result = await business.getPostManager().createPost(request.body);
             response.status(200).send(result);
         } catch (error) {
             console.log(error);

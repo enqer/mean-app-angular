@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import { Post } from '../types';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,12 @@ export class DataService {
   }
 
   getById(id: string) {
-    console.log('data-service -> id:', id)
     return this.http.get(this.url + '/api/posts/' + id);
   }
 
+  createPost(post: Post){
+    return this.http.post(this.url + '/api/posts', post)
+  }
 
 }
 

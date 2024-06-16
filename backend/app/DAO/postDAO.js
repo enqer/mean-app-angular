@@ -30,6 +30,9 @@ async function get(id) {
         }
     });
 }
+async function createPost(post) {
+    PostModel(post).save();
+}
 
 async function createNewOrUpdate(data) {
     return Promise.resolve().then(() => {
@@ -49,6 +52,7 @@ export default {
     query: query,
     get: get,
     createNewOrUpdate: createNewOrUpdate,
+    createPost: createPost,
 
     model: PostModel
 };

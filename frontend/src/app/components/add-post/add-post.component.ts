@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { title } from 'process';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-add-post',
@@ -17,7 +17,7 @@ export class AddPostComponent implements OnInit{
     title: ''
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private service: DataService) {}
 
   ngOnInit(): void {}
 
@@ -36,8 +36,10 @@ export class AddPostComponent implements OnInit{
 
   createPost() {
       if (this.post.title != '' && this.post.description != '' && this.post.image != '')
-        console.log(this.post.image)
-        // this.router.navigate(['/']);
+        {
+          this.service.createPost(this.post);
+        }
+        this.router.navigate(['/']);
       }
     
       getBase64(file : File) {
