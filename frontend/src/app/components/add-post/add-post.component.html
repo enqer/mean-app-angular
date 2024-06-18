@@ -1,32 +1,32 @@
 <div class="container">
     <div class="mb-4">
-        <h3>Add new post</h3>
+        <h3>Dodaj nowy post</h3>
     </div>
     <form action="post" autocomplete="off" method="POST">
       <div class="input-group m-2">
         <input  (change)="onFileSelected($event)" accept="image/png, image/jpeg" type="file" class="form-control"
-               name="image" placeholder="Image" title="image">
+               name="image" placeholder="Image" title="image" alt="image" >
       </div>
   
       <div class="input-group m-2">
         <input [(ngModel)]="post.imageUrl" type="text" class="form-control"
-                       name="imageUrl" placeholder="ImageUrl" title="imageUrl">
+                       name="imageUrl" placeholder="Url zdjęcia" title="imageUrl">
       </div>
       <div class="input-group m-2">
         <input [(ngModel)]="post.title" type="text" class="form-control"
-               name="title" placeholder="Title" title="title">
+               name="title" placeholder="Tytuł" title="title">
       </div>
 
       <div class="input-group m-2">
         <textarea [(ngModel)]="post.description" class="form-control"
-               name="desc" placeholder="Description" title="description"></textarea>
+               name="desc" placeholder="Opis" title="description"></textarea>
 
       </div>
       <img 
       src="data:image/png;base64, " 
       alt="">
       <button (click)="createPost()"  class="btn btn-primary m-4" type="button" title="Przycisk">
-        Save
+        Zapisz
       </button>
     </form>
   </div>
