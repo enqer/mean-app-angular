@@ -26,5 +26,10 @@ export const routes: Routes = [
   {
     path: 'add-post',
     loadComponent: () => import('./components/add-post/add-post.component').then(m => m.AddPostComponent)
+  },
+  {
+    path: '**',
+    redirectTo: '', 
+    pathMatch: 'full'
   }
 ];
