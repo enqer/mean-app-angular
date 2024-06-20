@@ -1,7 +1,7 @@
 <div class="container m-5">
     <div class="mb-4">
-        <h3 *ngIf="isEdit()">Edytuj post</h3>
-        <h3 *ngIf="!isEdit()">Dodaj nowy post</h3>
+        <h3 class="entry-title" *ngIf="isEdit()"><span>Edytuj post</span><hr></h3>
+        <h3 class="entry-title" *ngIf="!isEdit()"><span>Dodaj nowy post</span><hr></h3>
     </div>
     <form action="post" autocomplete="off" method="POST">
       <div class="input-group m-2">

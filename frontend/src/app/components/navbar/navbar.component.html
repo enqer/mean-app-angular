@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Blog</a>
+    <a class="navbar-brand logo" href="#">Blog</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
           <a class="nav-link" [routerLink]="['/login']">Logowanie</a>
           <a class="nav-link" [routerLink]="['/signup']">Rejestracja</a>
         </div>
-        <button *ngIf="authService.isLoggedIn()" class="btn nav-link" (click)="signOut()">Wyloguj</button>
+        <button *ngIf="authService.isLoggedIn()" class="btn nav-link logout" (click)="signOut()">Wyloguj</button>
       </div>
     </div>
   </div>

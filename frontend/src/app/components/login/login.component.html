@@ -1,4 +1,5 @@
 <div class="container">
+  <h1 class="entry-title"><span>Logowanie</span></h1><hr>
   <form action="post" autocomplete="off" method="POST">
     <div class="input-group">
       <input [(ngModel)]="credentials.login" type="text" class="form-control"
@@ -11,7 +12,7 @@
     </div>
 
     <button (click)="signIn()" class="btn btn-primary" type="submit" title="Przycisk zaloguj">
-      Sign in
+      Zaloguj się
     </button>
   </form>
 </div>

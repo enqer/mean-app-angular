@@ -1,0 +1,65 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    min-height: 60vh;
+}
+
+h1 span {
+    font-size: 3.5rem;
+    background: -webkit-linear-gradient(45deg,#4299e1, #48bb78);
+    background-size: 100%;
+    font-weight: 800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.lead, .wrapper p {
+    color: #4a5568;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.wrapper div{
+    position: relative;
+    width: 100%;
+}
+
+.wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper p {
+    font-size: 1.5rem;
+}
+.wrapper p a{
+    color: #4299e1;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    animation: MoveUpDown 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: #48bb78;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 30px;
+    }
+  }
