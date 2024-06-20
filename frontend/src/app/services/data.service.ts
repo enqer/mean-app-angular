@@ -1,6 +1,6 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import { Post } from '../types';
+import { EditPost, Post } from '../types';
 import { DOCUMENT } from '@angular/common';
 
 @Injectable({
@@ -23,6 +23,10 @@ export class DataService {
 
   createPost(post: Post){
     return this.http.post(this.url + '/api/posts', post)
+  }
+
+  editPost(post: EditPost){
+    return this.http.put(this.url + '/api/posts', post)
   }
 
 }

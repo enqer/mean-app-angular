@@ -2,11 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {DataService} from "../../services/data.service";
 import {HttpClientModule} from "@angular/common/http";
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-blog-item-details',
   standalone: true,
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, RouterModule],
   providers: [DataService],
   templateUrl: './blog-item-details.component.html',
   styleUrl: './blog-item-details.component.css'
@@ -14,6 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
 export class BlogItemDetailsComponent implements OnInit {
   public image: string = '';
   public text: string = '';
+  public id: string = '';
 
   constructor(private service: DataService, private route: ActivatedRoute) {
   }
@@ -28,6 +30,7 @@ export class BlogItemDetailsComponent implements OnInit {
       const post = res;
       this.image = post['image'];
       this.text = post['text'];
+      this.id = id;
     });
 
   }

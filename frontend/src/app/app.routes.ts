@@ -24,7 +24,7 @@ export const routes: Routes = [
     loadComponent: () => import('./components/signup/signup.component').then(m => m.SignupComponent)
   },
   {
-    path: 'add-post',
+    path: 'post/:id',
     loadComponent: () => import('./components/add-post/add-post.component').then(m => m.AddPostComponent)
   },
   {

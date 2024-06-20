@@ -14,7 +14,7 @@
           <a class="nav-link" [routerLink]="['/blog']">Blog</a>
         </li>
         <li *ngIf="authService.isLoggedIn()" class="nav-item">
-          <a class="nav-link" [routerLink]="['/add-post']">Dodaj post</a>
+          <a class="nav-link" [routerLink]="['/post/', '']">Dodaj post</a>
         </li>
       </ul>
       <div class="d-flex">
