@@ -1,0 +1,9 @@
+.edit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5px;
+}
+.edit img {
+    width: 30px;
+}

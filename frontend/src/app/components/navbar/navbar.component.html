@@ -18,7 +18,7 @@
         </li>
       </ul>
       <div class="d-flex">
-        <div class="d-flex" *ngIf="!authService.isLoggedIn()">
+        <div class="d-flex gap-3" *ngIf="!authService.isLoggedIn()">
           <a class="nav-link" [routerLink]="['/login']">Logowanie</a>
           <a class="nav-link" [routerLink]="['/signup']">Rejestracja</a>
         </div>
